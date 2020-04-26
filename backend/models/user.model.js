@@ -1,3 +1,4 @@
+const crypto = require('crypto')
 const mongoose = require('mongoose')
 const {isValidPassword} = require('mongoose-custom-validators')
 const bcrypt = require('bcryptjs')
@@ -51,6 +52,12 @@ const userSchema = new Schema({
     passwordChangedAt: {
         type: Date
     },
+    passwordResetToken:{
+        type: String
+    },
+    passwordResetExpires: {
+        type: Date
+    },
     photo: String,
     address: {
         type: String
@@ -84,6 +91,33 @@ userSchema.pre('save', async function (next) {
     next();
 
 })
+
+userSchema.pre('save', function (next) {
+    //If the password has not been modified or if the document is new then return next
+    if(!this.isModified('password') || this.isNew) return next();
+
+    this.passwordChangedAt = Date.now() - 1000;
+    next();
+})
+
+userSchema.methods.createPasswordResetToken =  function() {
+    //This creates the reset token
+    const resetToken = crypto.randomBytes(32).toString('hex');
+
+    //This encrypts the reset token to prevent any vulnerabilities in the database being exposed.
+    this.passwordResetToken = crypto.createHash('sha256').update(resetToken).digest('hex');
+
+
+    //Converts the time into milliseconds
+    this.passwordResetExpires = Date.now() + 10 * 60 * 1000
+
+
+
+
+    return resetToken;
+
+
+}
 
 
 //Goal to return true if passwords are the same and false if not

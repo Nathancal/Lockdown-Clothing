@@ -74,6 +74,9 @@
       <workItem from="1587813257251" duration="9055000" />
       <workItem from="1587886153939" duration="50000" />
       <workItem from="1587886433016" duration="34000" />
+      <workItem from="1587890815143" duration="21000" />
+      <workItem from="1587890838119" duration="5676000" />
+      <workItem from="1587901872087" duration="5515000" />
     </task>
     <servers />
   </component>
@@ -85,10 +88,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2682" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586515819067" />
-    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1587742864576">
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1587890834780">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587742864576" />
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587890834780" />
     <state x="2381" y="163" key="SettingsEditor" timestamp="1586517384859">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -101,5 +104,9 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2536" y="243" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586859337430" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1587909516188">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587909516188" />
   </component>
 </project>
