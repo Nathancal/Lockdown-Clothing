@@ -96,6 +96,8 @@ userSchema.pre('save', function (next) {
     //If the password has not been modified or if the document is new then return next
     if(!this.isModified('password') || this.isNew) return next();
 
+    ///Ensures the token is always created after the password has been changed by setting the time it was created
+    //to be one second in the past
     this.passwordChangedAt = Date.now() - 1000;
     next();
 })

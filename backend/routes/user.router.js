@@ -12,6 +12,8 @@ router.post('/forgotpassword', authController.forgotPassword);
 //better to use patch for this than post
 router.patch('/resetpassword/:token', authController.resetPassword)
 
+router.patch('/updatemypassword', authController.protect, authController.updatePassword)
+
 router
     .route('')
     .post(userController.createUser)
